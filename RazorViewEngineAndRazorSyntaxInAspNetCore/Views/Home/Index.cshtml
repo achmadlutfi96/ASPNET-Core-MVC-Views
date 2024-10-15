@@ -1,0 +1,45 @@
+﻿@using RazorViewEngineAndRazorSyntaxInAspNetCore.Models
+<h3>Code Block</h3>
+
+@{
+    var greeting = "Welcome to ASP.NET Core MVC!";
+    var weekDay = DateTime.Now.DayOfWeek;
+    ViewData["Title"] = "Home Page";
+}
+
+@{
+    var product = new Product()
+            {
+                ProductID = 1000,
+                Name = "Laptop",
+                Description= "Its a Gaming Laptop",
+                Category = "Electronics",
+                Price = 10000
+            };
+}
+
+<h3>Code Expression</h3>
+<p>@greeting</p>
+<p>@DateTime.Now</p>
+<p>Today is : @weekDay thank you </p>
+<p>Name : @product.Name</p>
+<p>Description : @product.Description</p>
+<p>Price : @product.Price</p>
+
+
+<h3>Variables </h3>
+
+<!-- Storing a string -->
+@{
+    string message = "Welcome to ASP.NET Core MVC";
+}
+
+<!—Storing date and integer-->
+@{
+    DateTime date = DateTime.Now;
+    int Number = 100;
+}
+
+<p>@message</p>
+<p> The current date is @date</p>
+<p>Numbers : @Number</p>

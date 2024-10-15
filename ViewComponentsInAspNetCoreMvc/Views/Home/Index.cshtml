@@ -1,0 +1,11 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+@* <div class="text-center">
+    @await Component.InvokeAsync("TopProducts", new { count = 3})
+</div> *@
+
+<div class="text-center">
+    <vc:top-products count="3"></vc:top-products>
+</div>
